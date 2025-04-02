@@ -99,10 +99,10 @@
                             }
                         },
                         "TEAM_ADMIN_GROUP": {
-                          "Ref": "teamAdminGroup"
+                            "Ref": "teamAdminGroup"
                         },
                         "TEAM_AUDITOR_GROUP": {
-                          "Ref": "teamAuditorGroup"
+                            "Ref": "teamAuditorGroup"
                         }
                     }
                 },
@@ -112,7 +112,7 @@
                         "Arn"
                     ]
                 },
-                "Runtime": "python3.12",
+                "Runtime": "python3.13",
                 "Layers": [],
                 "Timeout": 120
             }
@@ -198,14 +198,14 @@
                         {
                             "Effect": "Allow",
                             "Action": [
-                              "dynamodb:GetItem"
+                                "dynamodb:GetItem"
                             ],
                             "Resource": [
-                              {
-                                "Fn::Sub": "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/Settings-*"
-                              }
+                                {
+                                    "Fn::Sub": "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/Settings-*"
+                                }
                             ]
-                          }
+                        }
                     ]
                 }
             }
